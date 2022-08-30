@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>AS Watson Demo Page</title>
+  <script src="https://product-gallery.cloudinary.com/all.js" type="text/javascript"></script>  
+
+  <style>
+    Body {font-family:Arial}
+  </style>
+</head>
+<body>
+<h1>Gallery Widget</h1>
+<div id="my-gallery" style="max-width:80%">
+</div>
+ <script>
+const myWidget = cloudinary.galleryWidget({
+    "cloudName": "patrickg",
+    "mediaAssets": [{
+        "publicId": "zoom-back-238949_btcetg",
+        "mediaType": "image"
+    }, {
+        "publicId": "zoom-front-238949_kocpzh",
+        "mediaType": "image"
+    }, {
+        "publicId": "zoom-side-238949_wwrdx5",
+        "mediaType": "image"
+    }, {
+        "publicId": "xbcwfehjy59qvbdecku8",
+        "mediaType": "video"
+    }],
+    "displayProps": {
+        "mode": "expanded"
+    },
+    "container": "#my-gallery"
+});
+myWidget.render();
+  </script>
+</body>
+</html>
